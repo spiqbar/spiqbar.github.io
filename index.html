@@ -99,7 +99,7 @@
   }
   .hero-left{ padding:150px clamp(20px,6vw,64px) 60px; display:flex; flex-direction:column; justify-content:center; }
   .hero-name{ font-size:clamp(3rem,9vw,7rem); font-weight:600; line-height:.92; margin-bottom:6px; }
-  .hero-name .thin{ font-weight:500; color:var(--ink-soft); display:block; font-size:.42em; letter-spacing:.02em; margin-top:0.55em; }
+  .hero-name .thin{ font-weight:500; color:var(--ink-soft); display:block; font-size:.22em; letter-spacing:.02em; margin-top:0.7em; max-width:44ch; }
   .hero-right{
     background:var(--rust); color:var(--cream); display:flex; flex-direction:column; justify-content:space-between;
     padding:150px 40px 40px; position:relative; overflow:hidden;
@@ -114,7 +114,7 @@
   .hero-meta div{ display:flex; justify-content:space-between; border-bottom:1px solid rgba(250,245,234,0.25); padding-bottom:8px; }
   .hero-cta{ display:flex; gap:14px; margin-top:36px; flex-wrap:wrap; }
   .btn{
-    display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:100px;
+    display:inline-flex; align-items:center; gap:10px; padding:15px 28px;
     font-weight:600; font-size:.86rem; text-decoration:none; cursor:pointer; letter-spacing:.02em;
     transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
     border:1.5px solid var(--ink);
@@ -185,7 +185,7 @@
   .contact-title{ font-size:clamp(2.6rem,8vw,6rem); line-height:1; margin-bottom:36px; }
   .contact-title a{ text-decoration:none; color:var(--paper-2); border-bottom:4px solid var(--paper-2); }
   .contact-title a:hover{ color:var(--cream); border-color:var(--cream); }
-  .contact-sub{ color:#cabca4; max-width:56ch; margin-bottom:44px; font-size:1.05rem; }
+  .contact-sub{ color:#cabca4; max-width:68ch; margin-bottom:40px; font-size:.94rem; }
   .contact-links{ display:flex; gap:14px; flex-wrap:wrap; }
   .contact-card{
     display:flex; align-items:center; gap:10px; padding:14px 24px; border:1.5px solid rgba(250,245,234,0.5);
@@ -257,7 +257,6 @@
       <div class="hero-meta">
         <div><span>Status</span><span>Open — Fall/Spring roles</span></div>
         <div><span>Base</span><span>Champaign-Urbana, IL</span></div>
-        <div><span>Visa</span><span>J-1, up to 20h/wk</span></div>
         <div><span>Origin</span><span>Valencia, Spain</span></div>
       </div>
     </div>
@@ -271,7 +270,7 @@
           <p class="pull-quote">"I care about the part of AI work that isn't the model."</p>
           <div class="about-body">
             <p>I'm a senior Data Science student at Universitat Politècnica de València (ETSINF), currently spending my final year as an exchange student at the University of Illinois Urbana-Champaign, Grainger College of Engineering. Before that, I spent a year running my own cybersecurity startup and building agentic AI features in production at a fintech.</p>
-            <p>What ties it together: I like systems that are auditable, not just accurate. At the fintech where I worked this summer, my favorite piece of work wasn't a model — it was catching a permissions bug that let advisor-only notes leak into client views, and fixing it at the data layer with tests to stop it happening again.</p>
+            <p>What ties it together: I like systems that are auditable, not just accurate. At the fintech where I worked this summer, some of my most useful work wasn't a model — it was tracking down a subtle data-access bug and shipping the fix with tests to make sure it stayed fixed.</p>
             <p>Outside of engineering: former treasurer of ACM UPV and organizer of a 70-person tech leadership summit for CDTM Valencia. I tend to take on more than one thing at a time — it's the environment I perform best in.</p>
           </div>
         </div>
@@ -296,9 +295,9 @@
           <div class="exp-role">AI Engineer</div>
           <div class="exp-org">Sherpas Wealth Technology</div>
           <ul class="exp-desc">
-            <li>Built AI cloud infrastructure and backend logic (Go, Python) for an agentic Financial Health Score feature.</li>
-            <li>Found and fixed a data-layer permissions bug leaking advisor-only notes into client views; added regression tests.</li>
-            <li>Migrated the Market Analyst agent from prototype to production Go.</li>
+            <li>Built AI cloud infrastructure and backend logic in Go and Python for a fintech's advisor-facing platform.</li>
+            <li>Rewrote core backend services in Go, replacing a legacy stack under live production traffic.</li>
+            <li>Shipped LLM-based reasoning pipelines that now run in production.</li>
           </ul>
         </div>
         <div class="exp-date">Jun–Aug 2026<br>Valencia, ES</div>
@@ -320,37 +319,13 @@
       <div class="exp-row reveal">
         <div class="exp-num">03</div>
         <div>
-          <div class="exp-role">Data Strategy Consultant</div>
-          <div class="exp-org">Improven</div>
-          <ul class="exp-desc">
-            <li>Contributing to consulting projects using Agile methods to streamline client workflows.</li>
-            <li>Translating technical data analysis into decisions non-technical stakeholders can act on.</li>
-          </ul>
-        </div>
-        <div class="exp-date">May 2026–present<br>Valencia, ES</div>
-      </div>
-
-      <div class="exp-row reveal">
-        <div class="exp-num">04</div>
-        <div>
-          <div class="exp-role">Technology Trend Consultant</div>
-          <div class="exp-org">IMED Hospitales &amp; CDTM</div>
-          <ul class="exp-desc">
-            <li>Ran a Technology Trend Seminar on the future of healthcare.</li>
-            <li>Presented strategic conclusions directly to the executive board.</li>
-          </ul>
-        </div>
-        <div class="exp-date">Mar–Apr 2026<br>Valencia, ES</div>
-      </div>
-
-      <div class="exp-row reveal">
-        <div class="exp-num">05</div>
-        <div>
           <div class="exp-role">Member, Honors Program</div>
           <div class="exp-org">CDTM Valencia (Center for Digital Technology &amp; Management)</div>
           <ul class="exp-desc">
-            <li>Selected for a competitive honors program in technology management, run alongside my regular coursework.</li>
-            <li>Organized the CDTM Tech Leader Summit, a curated 70-person matchmaking event connecting students with industry leaders.</li>
+            <li>Selected for a competitive honors program in technology management, run alongside regular coursework.</li>
+            <li>Advised Improven on a data strategy project for a corporate client, applying Agile methods.</li>
+            <li>Ran a healthcare technology trend seminar with IMED Hospitales for executive board members.</li>
+            <li>Organized the CDTM Tech Leaders Summit, an invite-only 70-person event connecting founders, corporates, and investors.</li>
           </ul>
         </div>
         <div class="exp-date">Jan 2026 – present<br>Valencia, ES</div>
@@ -440,7 +415,7 @@
         <div><div class="edu-title">Center for Digital Technology &amp; Management (CDTM)</div><div class="edu-sub">Honors Program in Technology Management, Valencia</div></div>
         <div class="edu-date">Jan 2026 – present</div>
       </div>
-      <div class="edu-note reveal"><b>Thesis in progress:</b> hybrid quantum-classical architectures for portfolio optimization, co-advised between Universitat de València and UIUC (CS/IQUIST). Happy to talk through it in more detail on request.</div>
+      <div class="edu-note reveal"><b>Thesis in progress:</b> AI-assisted hybrid quantum-classical methods for portfolio optimization, advised by Prof. Víctor Fernández Pallarés (QAVA research group, Universitat de València) with faculty sponsorship from Prof. Makrand Sinha (UIUC Computer Science / IQUIST). Happy to talk through it in more detail on request.</div>
     </div>
   </section>
 
@@ -448,7 +423,7 @@
     <div class="band-inner">
       <div class="kicker">06 — Contact</div>
       <h2 class="contact-title">Let's talk.</h2>
-      <p class="contact-sub">Based in Champaign-Urbana, IL, authorized to work on-campus and in Research Park (J-1, up to 20 hrs/week). Reach out about roles, research collaborations, or just to say hi.</p>
+      <p class="contact-sub">Reach out about roles, research collaborations, or just to say hi.</p>
       <div class="contact-links">
         <a class="contact-card" href="mailto:susannapiquer@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> susannapiquer@gmail.com</a>
         <a class="contact-card" href="https://www.linkedin.com/in/susanna-piquer-barrachina/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2c1-1.5 2.5-2.3 4.5-2.3 3 0 4.5 2 4.5 5.3V21h-4v-6c0-1.5-.6-2.5-2-2.5s-2.3 1-2.3 2.5V21h-4z"/></svg> LinkedIn</a>
