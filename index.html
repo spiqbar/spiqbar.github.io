@@ -10,12 +10,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Susanna Piquer Barrachina — Data Science &amp; AI Engineer">
 <meta property="og:description" content="Data Science student building machine learning systems in PyTorch, Go, and Python — from research to production.">
-<meta property="og:image" content="og-image.jpg">
+<meta property="og:image" content="https://spiqbar.github.io/ogimage.jpg">
 <meta property="og:url" content="https://spiqbar.github.io/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Susanna Piquer Barrachina — Data Science &amp; AI Engineer">
 <meta name="twitter:description" content="Data Science student building machine learning systems in PyTorch, Go, and Python — from research to production.">
-<meta name="twitter:image" content="og-image.jpg">
+<meta name="twitter:image" content="https://spiqbar.github.io/ogimage.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -218,10 +218,10 @@
 
 <div class="topbar" id="topbar">
   <a href="#home" class="wordmark">Susanna Piquer</a>
-  <button class="menu-btn" id="menuBtn"><span>Menu</span><span class="bars"><span></span><span></span></span></button>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="overlayMenu"><span>Menu</span><span class="bars"><span></span><span></span></span></button>
 </div>
 
-<div class="overlay-menu" id="overlayMenu">
+<div class="overlay-menu" id="overlayMenu" aria-hidden="true" inert>
   <nav>
     <a href="#about" data-close><span class="num mono">01</span> About</a>
     <a href="#experience" data-close><span class="num mono">02</span> Experience</a>
@@ -271,12 +271,12 @@
           <div class="about-body">
             <p>I'm a senior Data Science student at Universitat Politècnica de València (ETSINF), currently spending my final year as an exchange student at the University of Illinois Urbana-Champaign, Grainger College of Engineering. Before that, I spent a year running my own cybersecurity startup and building agentic AI features in production at a fintech.</p>
             <p>What ties it together: I like systems that are auditable, not just accurate. At the fintech where I worked this summer, some of my most useful work wasn't a model — it was tracking down a subtle data-access bug and shipping the fix with tests to make sure it stayed fixed.</p>
-            <p>Outside of engineering: former treasurer of ACM UPV and organizer of a 70-person tech leadership summit for CDTM Valencia. I tend to take on more than one thing at a time — it's the environment I perform best in.</p>
+            <p>Outside of engineering: former treasurer of ACM UPV and co-organizer of a 70-person tech leadership summit for CDTM Valencia. I tend to take on more than one thing at a time — it's the environment I perform best in.</p>
           </div>
         </div>
         <div class="fact-stack reveal">
           <div class="fact"><span class="fact-num">8.5/10</span><span class="fact-label">Major GPA (~3.5/4.0 US) · Highest Honors</span></div>
-          <div class="fact"><span class="fact-num">1st</span><span class="fact-label">Place, Octocypher · Cybersecurity Startup Program 2025</span></div>
+          <div class="fact"><span class="fact-num">1st</span><span class="fact-label">Place &amp; EUR 5,000, Octocypher · Valencia Digital Summit</span></div>
           <div class="fact"><span class="fact-num">16.85d</span><span class="fact-label">RMSE localizing market regime shifts</span></div>
           <div class="fact"><span class="fact-num">0.71</span><span class="fact-label">F1-Macro, CAS-Net · EXIST 2026</span></div>
         </div>
@@ -295,9 +295,9 @@
           <div class="exp-role">AI Engineer</div>
           <div class="exp-org">Sherpas Wealth Technology</div>
           <ul class="exp-desc">
-            <li>Built AI cloud infrastructure and backend logic in Go and Python for a fintech's advisor-facing platform.</li>
-            <li>Rewrote core backend services in Go, replacing a legacy stack under live production traffic.</li>
-            <li>Shipped LLM-based reasoning pipelines that now run in production.</li>
+            <li>Shipped AI agents and LLM-based reasoning pipelines that now run in production.</li>
+            <li>Rewrote core backend services in Go, replacing a legacy Python stack under live traffic.</li>
+            <li>Maintained ETL pipelines turning raw financial data into advisor-facing insights.</li>
           </ul>
         </div>
         <div class="exp-date">Jun–Aug 2026<br>Valencia, ES</div>
@@ -310,7 +310,8 @@
           <div class="exp-org">Octocypher Seguridad Informática</div>
           <ul class="exp-desc">
             <li>Took a deep-tech cybersecurity project from prototype to a legally constituted startup.</li>
-            <li>Pitched at Valencia Digital Summit and won 1st place in the Cybersecurity Startup Program 2025.</li>
+            <li>Won the Cybersecurity Startup Program 2025 (Startup Valencia &amp; INCIBE) and its acceleration track.</li>
+            <li>Won 1st place and EUR 5,000 pitching to investors at Valencia Digital Summit.</li>
           </ul>
         </div>
         <div class="exp-date">Mar 2025–May 2026<br>Valencia, ES</div>
@@ -325,7 +326,7 @@
             <li>Selected for a competitive honors program in technology management, run alongside regular coursework.</li>
             <li>Advised Improven on a data strategy project for a corporate client, applying Agile methods.</li>
             <li>Ran a healthcare technology trend seminar with IMED Hospitales for executive board members.</li>
-            <li>Organized the CDTM Tech Leaders Summit, an invite-only 70-person event connecting founders, corporates, and investors.</li>
+            <li>Co-organized the CDTM Tech Leaders Summit, an invite-only 70-person event connecting founders, corporates, and investors.</li>
           </ul>
         </div>
         <div class="exp-date">Jan 2026 – present<br>Valencia, ES</div>
@@ -433,13 +434,22 @@
 
 </main>
 
-<footer>© 2026 Susanna Piquer Barrachina.</footer>
+<footer>© <span id="year">2026</span> Susanna Piquer Barrachina.</footer>
 
 <script>
   const body = document.body;
   const menuBtn = document.getElementById('menuBtn');
-  menuBtn.addEventListener('click', () => body.classList.toggle('menu-open'));
-  document.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', () => body.classList.remove('menu-open')));
+  const overlay = document.getElementById('overlayMenu');
+  function setMenu(open){
+    body.classList.toggle('menu-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    overlay.setAttribute('aria-hidden', String(!open));
+    overlay.inert = !open;
+  }
+  menuBtn.addEventListener('click', () => setMenu(!body.classList.contains('menu-open')));
+  document.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  document.getElementById('year').textContent = new Date().getFullYear();
 
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
