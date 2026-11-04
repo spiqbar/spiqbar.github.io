@@ -99,7 +99,7 @@
   }
   .hero-left{ padding:150px clamp(20px,6vw,64px) 60px; display:flex; flex-direction:column; justify-content:center; }
   .hero-name{ font-size:clamp(3rem,9vw,7rem); font-weight:600; line-height:.92; margin-bottom:6px; }
-  .hero-name .thin{ font-weight:500; color:var(--ink-soft); display:block; font-size:.22em; letter-spacing:.02em; margin-top:0.7em; max-width:44ch; }
+  .hero-name .thin{ font-weight:500; color:var(--ink-soft); display:block; font-size:clamp(1.05rem, 1.6vw, 1.55rem); line-height:1.35; letter-spacing:.02em; margin-top:0.7em; max-width:44ch; }
   .hero-right{
     background:var(--rust); color:var(--cream); display:flex; flex-direction:column; justify-content:space-between;
     padding:150px 40px 40px; position:relative; overflow:hidden;
@@ -154,12 +154,8 @@
   }
   .bento-card:hover{ background:var(--rust); color:var(--cream); transform:translateY(-4px); }
   .bento-card:hover .proj-cat, .bento-card:hover .proj-metric{ color:var(--cream); }
-  .b1{ grid-column:span 2; grid-row:span 2; }
-  .b2{ grid-column:span 2; grid-row:span 1; }
-  .b3{ grid-column:span 1; grid-row:span 1; }
-  .b4{ grid-column:span 1; grid-row:span 1; }
-  .b5{ grid-column:span 2; grid-row:span 1; }
-  .b6{ grid-column:span 2; grid-row:span 1; }
+  .b1,.b2,.b3,.b4,.b5,.b6{ grid-column:span 2; grid-row:span 1; }
+  .proj-metric{ margin-top:auto; }
   .proj-cat{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--rust-deep); font-weight:600; margin-bottom:10px; transition:color .3s ease; }
   .proj-title{ font-family:'Fraunces',serif; font-size:1.25rem; margin-bottom:8px; }
   .b1 .proj-title{ font-size:1.6rem; }
@@ -343,14 +339,14 @@
         <div class="bento-card b1">
           <div class="proj-cat">Deep Learning &amp; Time Series</div>
           <div class="proj-title">AnDiMultiTaskChangepointNet</div>
-          <p class="proj-desc">A PyTorch model that reads financial time series and flags the moment the market's underlying behavior shifts — the kind of change that often precedes a crash. It pairs convolutional layers (Conv1D) with a bidirectional LSTM (a network built to remember patterns over time), trained to solve two problems at once — how erratically prices are moving, and which market regime they're in — with a Bayesian layer that also reports its own confidence.</p>
+          <p class="proj-desc">Located market regime shifts in financial time series to within 16.85 days with a Conv1D-BiLSTM network and a Bayesian uncertainty layer. Deployed as an interactive dashboard.</p>
           <div class="proj-metric">RMSE 16.85d · 252-day window</div>
         </div>
 
         <div class="bento-card b2">
           <div class="proj-cat">NLP &amp; Computer Vision — EXIST 2026</div>
           <div class="proj-title">CAS-Net — Multimodal Sexism Detection</div>
-          <p class="proj-desc">Built to compete in EXIST 2026, an international shared task on detecting sexism in social media. CAS-Net (Context-Aware Sensorial Network) combines a language model (XLM-RoBERTa) with an image-and-text model (CLIP) and physiological signals, weighing each source through a Gated Fusion mechanism — plus a RAG module that retrieves supporting evidence before predicting, so the output stays traceable instead of a black box.</p>
+          <p class="proj-desc">Reached 0.7102 F1-Macro in the EXIST 2026 shared task by fusing text (XLM-RoBERTa), image (CLIP) and physiological signals. A gated fusion layer improved F1-Macro by up to 15%, and a retrieval module keeps predictions traceable.</p>
           <div class="proj-metric">F1-Macro 0.7102 · Official Test Set</div>
         </div>
 
@@ -378,7 +374,7 @@
         <div class="bento-card b6">
           <div class="proj-cat">Database Architecture</div>
           <div class="proj-title">Multi-Paradigm Asset Management</div>
-          <p class="proj-desc">A hybrid system pairing a relational database (Oracle SQL) with two NoSQL databases — Cassandra for large-scale data, Neo4j for mapping relationships between assets — with automated triggers enforcing data security.</p>
+          <p class="proj-desc">Hybrid system pairing Oracle SQL with Cassandra for large-scale data and Neo4j for asset relationships, with triggers enforcing data security.</p>
           <div class="proj-metric">Oracle SQL · Cassandra · Neo4j</div>
         </div>
 
@@ -416,6 +412,7 @@
         <div><div class="edu-title">Center for Digital Technology &amp; Management (CDTM)</div><div class="edu-sub">Honors Program in Technology Management, Valencia</div></div>
         <div class="edu-date">Jan 2026 – present</div>
       </div>
+      <div class="edu-note reveal"><b>Languages:</b> Spanish (native) · Valencian (C2) · English (C1, TOEFL iBT 97/120)</div>
     </div>
   </section>
 
